@@ -16,11 +16,12 @@ namespace Phoneword.Droid
             if (context == null)
                 return false;
 
-            var intent = new Intent (Intent.ActionCall);
-            intent.SetData (Uri.Parse ("tel:" + number));
+            var intent = new Intent(Intent.ActionCall);
+            intent.SetData(Uri.Parse("tel:" + number));
 
-            if (IsIntentAvailable (context, intent)) {
-                context.StartActivity (intent);
+            if (IsIntentAvailable(context, intent))
+            {
+                context.StartActivity(intent);
                 return true;
             }
 
@@ -37,7 +38,7 @@ namespace Phoneword.Droid
             if (list.Any())
                 return true;
 
-            var manager = TelephonyManager.FromContext (context);
+            var manager = TelephonyManager.FromContext(context);
             return manager.PhoneType != PhoneType.None;
         }
     }

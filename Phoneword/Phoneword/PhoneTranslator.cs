@@ -34,8 +34,8 @@ namespace Core
             return keyString.IndexOf(c) >= 0;
         }
 
-        static readonly string[] digits ={
-            "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
+        static readonly string[] digits = {
+            "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZÆØÅ"
         };
 
         static int? TranslateToNumber(char c)

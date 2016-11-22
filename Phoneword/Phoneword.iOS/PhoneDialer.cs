@@ -11,7 +11,7 @@ namespace Phoneword.iOS
         public bool Dial(string number)
         {
             return UIApplication.SharedApplication.OpenUrl(
-               new NSUrl("tel:" + number));
+                new NSUrl("tel:" + number));
         }
     }
 }
